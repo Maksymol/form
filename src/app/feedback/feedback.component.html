@@ -1,0 +1,286 @@
+<form (ngSubmit)="submitFeedback()" #feedbackForm="ngForm">
+  <div class="form">
+    <p class="subtitle">Назва</p>
+  </div>
+  <div class="chat-form">
+    <p>Чат</p>
+    <label for="chat-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="chat-rating" name="chat-rating" [(ngModel)]="feedback.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="chat-choice">Ваш вибір</label>
+      <select id="chat-choice" name="chat-choice" [(ngModel)]="feedback.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="chat-comment">Коментар</label>
+      <textarea id="chat-comment" name="chat-comment" [(ngModel)]="feedback.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="subscribe-form">
+    <p>Підписки</p>
+    <label for="subscribe-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="subscribe-rating" name="subscribe-rating" [(ngModel)]="feedback2.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="subscribe-choice">Ваш вибір</label>
+      <select id="subscribe-choice" name="subscribe-choice" [(ngModel)]="feedback2.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="subscribe-comment">Коментар</label>
+      <textarea id="subscribe-comment" name="subscribe-comment" [(ngModel)]="feedback2.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="discussion-form">
+    <p>Дискусія</p>
+    <label for="discussion-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="discussion-rating" name="discussion-rating" [(ngModel)]="feedback3.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="discussion-choice">Ваш вибір</label>
+      <select id="discussion-choice" name="discussion-choice" [(ngModel)]="feedback3.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="discussion-comment">Коментар</label>
+      <textarea id="discussion-comment" name="discussion-comment" [(ngModel)]="feedback3.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="settings-form">
+    <p>Налаштування</p>
+    <label for="settings-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="settings-rating" name="settings-rating" [(ngModel)]="feedback4.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="settings-choice">Ваш вибір</label>
+      <select id="settings-choice" name="settings-choice" [(ngModel)]="feedback4.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="settings-comment">Коментар</label>
+      <textarea id="settings-comment" name="settings-comment" [(ngModel)]="feedback4.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="comun-form">
+    <p>Комуналка</p>
+    <label for="comun-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="comun-rating" name="comun-rating" [(ngModel)]="feedback5.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="comun-choice">Ваш вибір</label>
+      <select id="comun-choice" name="comun-choice" [(ngModel)]="feedback5.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="comun-comment">Коментар</label>
+      <textarea id="comun-comment" name="comun-comment" [(ngModel)]="feedback5.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="hsearch-form">
+    <p>Пошук оселі</p>
+    <label for="hsearch-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="hsearch-rating" name="hsearch-rating" [(ngModel)]="feedback6.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="hsearch-choice">Ваш вибір</label>
+      <select id="hsearch-choice" name="hsearch-choice" [(ngModel)]="feedback6.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="hsearch-comment">Коментар</label>
+      <textarea id="hsearch-comment" name="hsearch-comment" [(ngModel)]="feedback6.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="lessee-form">
+    <p>Пошук орендаря</p>
+    <label for="lessee-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="lessee-rating" name="lessee-rating" [(ngModel)]="feedback7.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="lessee-choice">Ваш вибір</label>
+      <select id="lessee-choice" name="lessee-choice" [(ngModel)]="feedback7.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="lessee-comment">Коментар</label>
+      <textarea id="lessee-comment" name="lessee-comment" [(ngModel)]="feedback7.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="deal-form">
+    <p>Угоди</p>
+    <label for="deal-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="deal-rating" name="deal-rating" [(ngModel)]="feedback8.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="deal-choice">Ваш вибір</label>
+      <select id="deal-choice" name="deal-choice" [(ngModel)]="feedback8.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="deal-comment">Коментар</label>
+      <textarea id="deal-comment" name="deal-comment" [(ngModel)]="feedback8.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="content-form">
+    <p>Наповнення</p>
+    <label for="content-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="content-rating" name="content-rating" [(ngModel)]="feedback9.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="content-choice">Ваш вибір</label>
+      <select id="content-choice" name="content-choice" [(ngModel)]="feedback9.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="content-comment">Коментар</label>
+      <textarea id="content-comment" name="content-comment" [(ngModel)]="feedback9.comment" required></textarea>
+    </div>
+  </div>
+
+  <div class="access-form">
+    <p>Мешканці (доступи)</p>
+    <label for="access-rating">
+      <p>Оцінка</p>
+    </label>
+    <select id="access-rating" name="access-rating" [(ngModel)]="feedback10.rating" required>
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <div class="form-group">
+      <label for="access-choice">Ваш вибір</label>
+      <select id="access-choice" name="access-choice" [(ngModel)]="feedback10.choice">
+        <option value="option1">Very bad</option>
+        <option value="option2">bad</option>
+        <option value="option3">ok</option>
+        <option value="option4">good</option>
+        <option value="option5">perfect</option>
+      </select>
+    </div>
+    <div>
+      <label for="access-comment">Коментар</label>
+      <textarea id="access-comment" name="access-comment" [(ngModel)]="feedback10.comment" required></textarea>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!feedbackForm.valid">Відправити</button>
+</form>
